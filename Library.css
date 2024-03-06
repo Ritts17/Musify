@@ -40,6 +40,14 @@
     padding-right: 40px; 
 }
 
+.songitemSearch{
+    display: inline-block;
+    flex-direction: column;
+    height: 100px;
+    width: 150p     x;
+    padding-right: 40px; 
+}
+
 .songlist{
     margin: 0px;
     padding: 0px;

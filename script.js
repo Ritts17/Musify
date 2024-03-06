@@ -139,6 +139,8 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) =>
     })
 })
 
+
+
 document.getElementById('next').addEventListener('click', () => {
     if (songIndex >= 71) {
         songIndex = 0
@@ -169,3 +171,20 @@ document.getElementById('previous').addEventListener('click', () => {
     masterPlay.classList.remove('fa-play-circle');
     masterPlay.classList.add('fa-pause-circle');
 })
+
+    let filter = document.getElementById('find').value.upUpperCase();
+    let item = document.querySelectorAll('.songitem');
+    let l = document.getElementsByTagName('h4')
+
+    for(var i = 0; i <= l.length; i++){
+        let a = item[i].getElementsByTagName('h4')[0];
+
+        let value = a.innerHTML || a.innerText || a.textContent;
+
+        if(value.toUppercase().indexOf(filter) > -1){
+            item[i].style.display="";
+        }
+        else {
+            item[i].style.display="none";
+        }
+    }

@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     font-size: 16px;
     font-family: 'Century Gothic', 'URW Gothic', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     --text-primary: #b6b6b6;
@@ -7,6 +7,7 @@
     --bg-secondary: #141418;
     --transition-speed: 600ms;
 }
+
 
 body {
     background: url("./Resources/bg.jpg");
@@ -106,19 +107,20 @@ body::-webkit-scrollbar-thumb {
     transition: 1s ease-in;
 }
 
-.containerfluid {
-    width: auto;
-    height: auto;
-    margin-right: 30px;
-    float: right;
-    
+#sendbutton{
+    border-radius: 8px;
 }
 
 .container {
     width: auto;
     height: auto;
     margin: auto;
-    right: 25px;
+    left: 25px;
+}
+
+.Sentmessage{
+    color: #1fec59;
+    display: none;
 }
 
 .container.search {
@@ -139,6 +141,10 @@ body::-webkit-scrollbar-thumb {
     
 }
 
+#searchbutton{
+    
+    border-radius: 8px;
+}
 .container.search.input {
     width: 60%;
     padding: 5px 16px;

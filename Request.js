@@ -1,4 +1,4 @@
-﻿
+
 console.log("Welcome to Spotify");
 // Initialize the Variables
 let songIndex = 0;
@@ -105,17 +105,8 @@ songItems.forEach((element, i) => {
     element.getElementsByClassName("songName")[0].innerText = songs[i].songName;
 })
 
-function seekBackward(){
-    console.log("hello");
-    audioElement.currentTime -= 10;
-    progress = parseInt((audioElement.currentTime / audioElement.duration) * 100);
-    ProgressBar.value = progress;
-
-}
-function seekForward(){
-    audioElement.currentTime += 10;
-    progress = parseInt((audioElement.currentTime / audioElement.duration) * 100);
-    ProgressBar.value = progress;
+function send(){
+    document.getElementById("Sentmessage").style.display='block';
 }
 function search(){
     let flag = 0;
@@ -179,13 +170,12 @@ masterPlay.addEventListener('click', () => {
 // Listen to Events
 audioElement.addEventListener('timeupdate', () => {
     // Update Seekbar
-    // progress = parseInt((audioElement.currentTime / audioElement.duration) * 100);
-    ProgressBar.value = ((audioElement.currentTime / audioElement.duration) * 100)
-    console.log(ProgressBar.value)
+    progress = parseInt((audioElement.currentTime / audioElement.duration) * 100);
+    ProgressBar.value = progress;
 })
 
 ProgressBar.addEventListener('change', () => {
-    audioElement.currentTime = ProgressBar.value * audioElement.duration / 100
+    audioElement.currentTime = ProgressBar.value * audioElement.duration / 100;
 })
 
 const makeAllPlays = () => {
@@ -201,7 +191,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) =>
         songIndex = parseInt(e.target.id);
         e.target.classList.remove('fa-play-circle');
         e.target.classList.add('fa-pause-circle');
-        audioElement.src = `songs/${songIndex + 4}.mp3`;
+        audioElement.src = `songs/${songIndex + 1}.mp3`;
         masterSongName.innerText = songs[songIndex].songName;
         audioElement.currentTime = 0;
         audioElement.play();

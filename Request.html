@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musify - Music On The Go</title>
+    <link href="Request.css" rel="stylesheet" />
+    <link href="Navbar.css" media="screen and (min-width: 1100px)" rel="stylesheet" />
+    <link rel="stylesheet" media="screen and (max-width: 1100px)" href="./responsive.css">
+    <link rel="shortcut icon"  type=" image/jpg " href="./Resources/logo.jpg">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a class="nav-link" href="./Home.html">
+                    <img src="./Resources/logo.jpg" />
+                    <span class="link-text">Musify</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./Home.html">
+                    <img src="icons/home1.png" alt="Home" />
+                    <span class="link-text">Home</span>
+                </a>
+            </li>
+           
+            <li class="nav-item">
+                <a class="nav-link" href="./Library.html">
+                    <img src="icons/library.png" alt="Library" />
+                    <span class="link-text">Library</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./About.html">
+                    <img src="icons/about1.png" alt="About us" />
+                    <span class="link-text">About us</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <img src="icons/rating.png" alt="Rating & Review" />
+                    <span class="link-text">Rating & Review</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./Request.html">
+                    <img src="icons/request1.png" alt="Request Songs" />
+                    <span class="link-text">Request Songs</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h1 class="abc">Request songs</h1>
+        <hr>
+        <div class="containerfluid">
+            <div class="container">
+                <div class="search">
+                    <h3>Search for songs to be sent to your Email.</h3>
+                    <input type="text" name="" id="find" placeholder="Search here...." onekeyup="search()">
+                    <button id="searchbutton" onclick="search()">Search</button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div>
+            <span id="songNotFound" style="display: none;"></span>
+        </div>
+        <div>
+            <div class="songitemSearch" id="songitemSearch" style="display: none;">
+                <img src="./Resources/logo.jpg" id="songImageSearch" alt=""  height="200px" width="200px"/>
+                <span class="songName" id="songNameSearch">This is my song</span>
+                 <span class="songlistplaySearch"><i id="playSearch" onclick="playSearch()" value="999" class="far songItemPlaySearch fa-play-circle"></i></span>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="Mail">
+            <h3>Enter your Email.</h3>
+            <input type="text" name="" id="find" placeholder="Email" onekeyup="search()">
+            <button id="sendbutton" onclick="send()">Send</button>
+            <h4 class="Sentmessage" id="Sentmessage">Mail sent successfully!!!</h4>
+        </div>
+        
+        
+    </main>
+    <script src="Request.js"></script>
+    <script src="https://kit.fontawesome.com/d5b2540b36.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
